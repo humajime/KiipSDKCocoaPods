@@ -26,12 +26,12 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '5.0'
   s.requires_arc = true
 
-  s.source_files = 'Kiip/**/*.h'
-  s.preserve_paths = 'Kiip/**/*.a'
+  s.source_files = 'Kiip/*.h'
+  s.preserve_paths = 'Kiip/*.a'
   s.libraries = "z", "Kiip"
   s.frameworks = 'CoreTelephony', 'QuartzCore', 'SystemConfiguration', 'AdSupport', 'Passkit', 'MediaPlayer'
   #  ss.weak_frameworks = 'AdSupport', 'StoreKit'
-  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Kiip/Kiip"' }
+  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/KiipSDK/"' }
   #  ss.resources = 'Kiip/*.png'
   s.resource_bundle = { 'KiipSDKResources' => 'Kiip/*.png' }
 
