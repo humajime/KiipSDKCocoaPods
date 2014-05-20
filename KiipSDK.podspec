@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.homepage         = "http://www.kiip.com/"
   s.license          = { :type => 'Commercial', :text => license }
   s.author           = { "Kiip" => "http://www.kiip.com" }
-  s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/humajime/KiipSDKCocoaPods.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/kiip'
 
   s.platform     = :ios, '6.0'
@@ -36,7 +36,8 @@ Pod::Spec.new do |s|
     ss.frameworks = 'CoreTelephony', 'QuartzCore', 'SystemConfiguration', 'AdSupport', 'Passkit', 'MediaPlayer'
   #  ss.weak_frameworks = 'AdSupport', 'StoreKit'
     ss.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Kiip/Kiip"' }
-    ss.resources = 'Kiip/*.png'
+  #  ss.resources = 'Kiip/*.png'
+    ss.resource_bundle = { 'KiipSDKResources' => 'Kiip/*.png' }
   end
 
   # s.public_header_files = 'Classes/**/*.h'
