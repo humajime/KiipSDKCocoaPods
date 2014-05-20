@@ -14,10 +14,7 @@ Pod::Spec.new do |s|
   s.version          = "2.0.8"
   s.summary          = "KiipSDK."
   s.description      = <<-DESC
-                       An optional longer description of KiipSDK
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+			Simple event based monetization library. Engage users with rewards from brands they love.
                        DESC
   s.homepage         = "http://www.kiip.com/"
   s.license          = { :type => 'Commercial', :text => license }
@@ -32,7 +29,7 @@ Pod::Spec.new do |s|
   s.subspec 'KiipSDK' do |ss|
     ss.source_files = 'Kiip/**/*.h'
     ss.preserve_paths = 'Kiip/**/*.a'
-    ss.libraries = "z", "libKiip"
+    ss.libraries = "z", "Kiip"
     ss.frameworks = 'CoreTelephony', 'QuartzCore', 'SystemConfiguration', 'AdSupport', 'Passkit', 'MediaPlayer'
   #  ss.weak_frameworks = 'AdSupport', 'StoreKit'
     ss.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Kiip/Kiip"' }
