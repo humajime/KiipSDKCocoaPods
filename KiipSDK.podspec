@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
     ss.libraries = "z", "Kiip"
     ss.frameworks = 'CoreTelephony', 'QuartzCore', 'SystemConfiguration', 'AdSupport', 'Passkit', 'MediaPlayer'
     #  ss.weak_frameworks = 'AdSupport', 'StoreKit'
-    ss.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/KiipSDK/KiipSDK/"' }
+    ss.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/KiipSDK/Kiip/"' }
     #  ss.resources = 'Kiip/*.png'
     ss.resource_bundle = { 'KiipSDKResources' => 'Kiip/*.png' }
   end
