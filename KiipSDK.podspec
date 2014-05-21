@@ -29,10 +29,10 @@ Pod::Spec.new do |s|
   s.subspec 'KiipSDK' do |ss|
     ss.source_files = 'Kiip/*.h'
     ss.preserve_paths = 'Kiip/*.a'
-    ss.libraries = "z", "Kiip.a"
+    ss.libraries = "z", "Kiip"
     ss.frameworks = 'CoreTelephony', 'QuartzCore', 'SystemConfiguration', 'AdSupport', 'Passkit', 'MediaPlayer'
     #  ss.weak_frameworks = 'AdSupport', 'StoreKit'
-    ss.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/KiipSDK/"' }
+    ss.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/KiipSDK/KiipSDK/"' }
     #  ss.resources = 'Kiip/*.png'
     ss.resource_bundle = { 'KiipSDKResources' => 'Kiip/*.png' }
   end
